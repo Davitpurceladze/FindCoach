@@ -1,3 +1,4 @@
 <template>
-  <h2>Coaches List</h2>
+  <section>Filter</section>
+  <section>List Of Coaches</section>
 </template>
