@@ -34,8 +34,9 @@ export default {
       `https://find-a-coach-241a1-default-rtdb.firebaseio.com/coaches.json`
     );
     const responseData = await response.json();
-    if (response.ok) {
-      //...
+    if (!response.ok) {
+      const error = new Error(responseData.message || 'Failed to fetch!');
+      throw error;
     }
 
     const coaches = [];
